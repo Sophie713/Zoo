@@ -14,11 +14,11 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
 //create a list of animals
         ArrayList<Animal> animals = new ArrayList<>();
-        animals.add(new Animal(R.drawable.if_hedgehog_22391, "Hedgehog","Toby"));
+        animals.add(new Animal(R.drawable.hedgehod_d, "Hedgehog","Toby"));
         animals.add(new Animal(R.drawable.cat, "Cat","Mici"));
-        animals.add(new Animal(R.drawable.if_dog_22389, "Dog","Bone"));
-        animals.add(new Animal(R.drawable.if_panda_22395, "Panda","Sia"));
-        animals.add(new Animal(R.drawable.if_thebat_49053, "Bat","Posty"));
+        animals.add(new Animal(R.drawable.dog, "Dog","Bone"));
+        animals.add(new Animal(R.drawable.panda, "Panda","Sia"));
+        animals.add(new Animal(R.drawable.bat, "Bat","Posty"));
 
 //put animals into the view
         AnimalAdapter animalList = new AnimalAdapter(this, animals);

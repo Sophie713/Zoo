@@ -9,6 +9,7 @@ public class Animal {
     private String mSpecies;
     private String mName;
 
+
     Animal(int imgResourceId, String species, String name){
 
         mImgResourceId = imgResourceId;
