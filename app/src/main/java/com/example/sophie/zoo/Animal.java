@@ -31,7 +31,5 @@ public class Animal {
         return mSpecies;
     }
 
-    public int getSound() {
-        return mSound;
-    }
+    public int getSound() { return mSound; }
 }

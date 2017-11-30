@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 //create a list of animals
-        ArrayList<Animal> animals = new ArrayList<>();
+        final ArrayList<Animal> animals = new ArrayList<>();
         animals.add(new Animal(R.drawable.hedgehog_d, "Hedgehog","Toby", R.raw.hedgehog));
         animals.add(new Animal(R.drawable.cat, "Cat","Mici", R.raw.cat));
         animals.add(new Animal(R.drawable.dog, "Dog","Bone", R.raw.dog));
@@ -36,7 +36,9 @@ public class MainActivity extends AppCompatActivity {
         animalListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-                mPlayer = MediaPlayer.create(MainActivity.this, R.raw.bat);
+                Animal animal = animals.get(position);
+                mPlayer = MediaPlayer.create(MainActivity.this, animal.getSound())
+                ;
                 mPlayer.start();
             }
         });
