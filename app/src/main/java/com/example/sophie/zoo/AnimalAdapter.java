@@ -12,9 +12,7 @@ import android.widget.TextView;
 
 import java.util.ArrayList;
 
-/**
- * Created by Sophie on 11/18/2017.
- */
+//Animal Adapter
 
 public class AnimalAdapter extends ArrayAdapter {
 
@@ -30,13 +28,14 @@ public class AnimalAdapter extends ArrayAdapter {
 
         Animal currentAnimal = (Animal) getItem(position);
 
-        int animalPicture = currentAnimal.getImg();
-        String species = currentAnimal.getSpecies();
-        String animalName = currentAnimal.getAnimalName();
 
         ImageView mAnimalPicture = customView.findViewById(R.id.animal_photo);
         TextView mSpecies = customView.findViewById(R.id.species);
         TextView mName = customView.findViewById(R.id.name);
+
+        mSpecies.setText(currentAnimal.getSpecies());
+        mName.setText(currentAnimal.getAnimalName());
+        mAnimalPicture.setImageResource(currentAnimal.getImg());
 
         return customView;
     }

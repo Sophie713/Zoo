@@ -8,12 +8,15 @@ public class Animal {
     private int mImgResourceId;
     private String mSpecies;
     private String mName;
+    private int mSound;
 
-    Animal(int imgResourceId, String species, String name){
+
+    Animal(int imgResourceId, String species, String name, int sound){
 
         mImgResourceId = imgResourceId;
         mSpecies = species;
         mName = name;
+        mSound = sound;
     }
 
     public int getImg() {
@@ -27,4 +30,6 @@ public class Animal {
     public String getSpecies() {
         return mSpecies;
     }
+
+    public int getSound() { return mSound; }
 }
